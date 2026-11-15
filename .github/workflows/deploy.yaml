@@ -98,6 +98,18 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
 
+      - name: Verify AWS identity
+        run: |
+          aws sts get-caller-identity
+      
+      - name: Login to Amazon ECR
+        run: |
+          aws ecr get-login-password --region us-east-1 | \
+            docker login \
+            --username AWS \
+            --password-stdin 794038212837.dkr.ecr.us-east-1.amazonaws.com
+
+
       - name: Ensure ECR repositories exist
         run: |
           for repo in shopverse-frontend shopverse-backend shopverse-helmchart/shopverse; do
