@@ -659,8 +659,8 @@ Go to your GitHub repo > Settings > Secrets and variables > Actions, and add:
 | `AWS_REGION`            | e.g., `us-east-1`                                    |
 | `ECR_REGISTRY`          | e.g., `123456789.dkr.ecr.us-east-1.amazonaws.com`    |
 | `EKS_CLUSTER_NAME`      | e.g., `shopverse-cluster`                            |
-| `TF_STATE_BUCKET`       | Root@1234                                            |
-| `MYSQL_ROOT_PASSWORD`   | MySQL root password                                  |
+| `TF_STATE_BUCKET`       | shopverse-terraform-state|
+| `MYSQL_ROOT_PASSWORD`   | Root@1234 MySQL root password                                  |
 | `MYSQL_PASSWORD`        | App@1234                                             |
 | `JWT_SECRET`            | shopverse-secret-key-2024                            |
 
